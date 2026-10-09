@@ -1,0 +1,28 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Dependencies
+node_modules
+dist
+dist-ssr
+*.local
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Vercel & Editor
+.vercel
+.vscode
+.idea
+.DS_Store
+
+# Root raw video files (the compressed ones are inside public/videos)
+fff.mp4
+1009*.mp4
+skil.mp4

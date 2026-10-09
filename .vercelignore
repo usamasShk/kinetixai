@@ -1,0 +1,7 @@
+node_modules
+.git
+*.mp4
+!public/videos/*.mp4
+.vercel
+dist
+.env*

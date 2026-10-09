@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396">
+  <defs>
+    <linearGradient id="edgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22C55E" />
+      <stop offset="100%" stop-color="#16A34A" />
+    </linearGradient>
+
+    <radialGradient id="ambientGlow" cx="85%" cy="25%" r="55%">
+      <stop offset="0%" stop-color="#22C55E" stop-opacity="0.14" />
+      <stop offset="50%" stop-color="#22C55E" stop-opacity="0.015" />
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="minimalGrid" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="18" cy="18" r="0.75" fill="#FFFFFF" fill-opacity="0.035" />
+    </pattern>
+  </defs>
+
+  <!-- Deep Canvas -->
+  <rect width="1584" height="396" fill="#0A0A0A" />
+  <rect width="1584" height="396" fill="url(#minimalGrid)" />
+  <rect width="1584" height="396" fill="url(#ambientGlow)" />
+
+  <!-- Top Accent Border -->
+  <rect x="0" y="0" width="1584" height="3" fill="url(#edgeGrad)" />
+
+  <!-- Background Architecture Lines -->
+  <g stroke="#1F1F1F" stroke-width="1" opacity="0.6">
+    <line x1="980" y1="0" x2="1584" y2="260" stroke-dasharray="4 8" />
+    <line x1="1120" y1="396" x2="1584" y2="100" opacity="0.4" />
+    <line x1="840" y1="396" x2="1320" y2="0" opacity="0.3" />
+  </g>
+
+  <!-- Clean Floating Micro-Nodes -->
+  <circle cx="1220" cy="90" r="3" fill="#22C55E" opacity="0.7" />
+  <circle cx="1440" cy="180" r="2" fill="#FFFFFF" opacity="0.3" />
+  <circle cx="1500" cy="70" r="2.5" fill="#22C55E" opacity="0.6" />
+  <line x1="1220" y1="90" x2="1440" y2="180" stroke="#22C55E" stroke-width="0.75" opacity="0.2" />
+  <line x1="1440" y1="180" x2="1500" y2="70" stroke="#22C55E" stroke-width="0.75" opacity="0.2" />
+
+  <!-- ======================================================== -->
+  <!-- MAIN BRAND & HEADLINE (Shifted left for perfect spacing)  -->
+  <!-- ======================================================== -->
+  <g transform="translate(240, 78)">
+
+    <!-- Brand Wordmark Row -->
+    <g transform="translate(0, 0)">
+      <!-- Kinetic 'K' Geometric Mark -->
+      <g transform="translate(0, -6)">
+        <rect x="0" y="0" width="12" height="52" rx="2.5" fill="#FFFFFF" />
+        <path d="M12 24 L34 3 C36 1, 40 2, 40 6 L40 15 C40 17, 38 19, 34 22 L20 33 Z" fill="#22C55E" />
+        <path d="M18 30 L34 46 C37 49, 40 51, 40 52 L30 52 C27 52, 23 50, 20 45 L12 36 Z" fill="#FFFFFF" />
+        <circle cx="19" cy="31" r="4" fill="#22C55E" />
+      </g>
+
+      <!-- Wordmark Text -->
+      <text x="56" y="38" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="900" fill="#FFFFFF" letter-spacing="-0.03em">KINETIX</text>
+      
+      <!-- AI Badge -->
+      <g transform="translate(228, 8)">
+        <rect x="0" y="0" width="48" height="32" rx="6" fill="rgba(34, 197, 94, 0.12)" stroke="rgba(34, 197, 94, 0.4)" stroke-width="1.2" />
+        <text x="24" y="22" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="900" fill="#22C55E" text-anchor="middle">AI</text>
+      </g>
+
+      <!-- Studio Tag -->
+      <g transform="translate(294, 11)">
+        <rect x="0" y="0" width="176" height="26" rx="4" fill="#141414" stroke="#242424" stroke-width="1" />
+        <text x="12" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600" fill="#22C55E" letter-spacing="0.08em">AI ENGINEERING STUDIO</text>
+      </g>
+    </g>
+
+    <!-- Bold Main Headline — Perfectly Spaced with Zero Overlap -->
+    <g transform="translate(0, 96)">
+      <text font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" letter-spacing="-0.03em">
+        We build AI systems for <tspan fill="#22C55E">businesses</tspan> that need <tspan fill="#22C55E">results.</tspan>
+      </text>
+    </g>
+
+    <!-- Clean Monospace Capability Tags -->
+    <g transform="translate(0, 150)">
+      <!-- Pill 1: Workflow Automation -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="172" height="30" rx="5" fill="#111111" stroke="#222222" stroke-width="1" />
+        <circle cx="14" cy="15" r="3" fill="#22C55E" />
+        <text x="25" y="19" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500" fill="#D4D4D4">Workflow Automation</text>
+      </g>
+
+      <!-- Pill 2: Autonomous Agents -->
+      <g transform="translate(182, 0)">
+        <rect x="0" y="0" width="156" height="30" rx="5" fill="#111111" stroke="#222222" stroke-width="1" />
+        <circle cx="14" cy="15" r="3" fill="#22C55E" />
+        <text x="25" y="19" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500" fill="#D4D4D4">Autonomous Agents</text>
+      </g>
+
+      <!-- Pill 3: Enterprise RAG -->
+      <g transform="translate(348, 0)">
+        <rect x="0" y="0" width="134" height="30" rx="5" fill="#111111" stroke="#222222" stroke-width="1" />
+        <circle cx="14" cy="15" r="3" fill="#22C55E" />
+        <text x="25" y="19" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500" fill="#D4D4D4">Enterprise RAG</text>
+      </g>
+
+      <!-- Pill 4: Custom AI SaaS -->
+      <g transform="translate(492, 0)">
+        <rect x="0" y="0" width="134" height="30" rx="5" fill="#111111" stroke="#222222" stroke-width="1" />
+        <circle cx="14" cy="15" r="3" fill="#22C55E" />
+        <text x="25" y="19" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500" fill="#D4D4D4">Custom AI SaaS</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Contact Card: Positioned at x=1260 with ample breathing room -->
+  <g transform="translate(1260, 130)">
+    <rect x="0" y="0" width="280" height="110" rx="8" fill="#111111" stroke="#222222" stroke-width="1" />
+    
+    <g transform="translate(16, 26)">
+      <circle cx="4" cy="4" r="3" fill="#22C55E" />
+      <text x="16" y="8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#22C55E" letter-spacing="0.06em">DIRECT INQUIRIES</text>
+    </g>
+
+    <line x1="16" y1="50" x2="264" y2="50" stroke="#1F1F1F" stroke-width="1" />
+
+    <g transform="translate(16, 80)">
+      <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#FFFFFF">contactkinetixai@gmail.com</text>
+    </g>
+  </g>
+</svg>

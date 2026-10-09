@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" width="100%" height="100%">
+  <!-- Geometric Kinetic 'K' Mark Transparent -->
+  <g transform="translate(10, 10)">
+    <!-- Vertical Pillar -->
+    <rect x="0" y="0" width="12" height="60" rx="3" fill="#FFFFFF" />
+    
+    <!-- Upper Diagonal Ray -->
+    <path d="M12 28 L38 4 C40 2, 44 4, 44 8 L44 18 C44 20, 42 22, 38 26 L22 38 Z" fill="#22C55E" />
+    
+    <!-- Lower Diagonal Ray -->
+    <path d="M20 34 L38 52 C42 56, 44 58, 44 60 L32 60 C30 60, 26 57, 22 52 L12 40 Z" fill="#FFFFFF" />
+    
+    <!-- Central Kinetic Focal Node -->
+    <circle cx="21" cy="35" r="4.5" fill="#22C55E" />
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(74, 52)">
+    <!-- KINETIX text -->
+    <text font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="-0.03em">KINETIX</text>
+    
+    <!-- AI Accent Badge -->
+    <g transform="translate(162, -26)">
+      <rect x="0" y="0" width="48" height="30" rx="6" fill="rgba(34, 197, 94, 0.14)" stroke="rgba(34, 197, 94, 0.4)" stroke-width="1.5" />
+      <text x="24" y="21" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#22C55E" text-anchor="middle" letter-spacing="0.04em">AI</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Icon Mark Only on Dark Rounded Canvas -->
+  <rect width="100" height="100" rx="22" fill="#0A0A0A" stroke="#1F1F1F" stroke-width="2" />
+  
+  <g transform="translate(28, 20)">
+    <!-- Vertical Pillar -->
+    <rect x="0" y="0" width="12" height="60" rx="3" fill="#FFFFFF" />
+    
+    <!-- Upper Diagonal Ray -->
+    <path d="M12 28 L38 4 C40 2, 44 4, 44 8 L44 18 C44 20, 42 22, 38 26 L22 38 Z" fill="#22C55E" />
+    
+    <!-- Lower Diagonal Ray -->
+    <path d="M20 34 L38 52 C42 56, 44 58, 44 60 L32 60 C30 60, 26 57, 22 52 L12 40 Z" fill="#FFFFFF" />
+    
+    <!-- Central Kinetic Focal Node -->
+    <circle cx="21" cy="35" r="4.5" fill="#22C55E" />
+  </g>
+</svg>

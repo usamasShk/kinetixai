@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KINETIX AI — Brand Assets, LinkedIn Banners & PDF Kit</title>
+  <link rel="icon" type="image/png" href="/logo-icon.png">
+  <style>
+    :root {
+      --bg: #0A0A0A;
+      --surface: #111111;
+      --surface-raised: #181818;
+      --border: #1F1F1F;
+      --green: #22C55E;
+      --text: #FFFFFF;
+      --text-muted: #888888;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
+    body { background: var(--bg); color: var(--text); padding: 48px 24px; min-height: 100vh; }
+    .container { max-width: 1040px; margin: 0 auto; }
+    h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; }
+    h1 span { color: var(--green); }
+    h2 { font-size: 1.35rem; font-weight: 600; margin: 40px 0 20px 0; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+    p.sub { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px; }
+    .pdf-hero { background: linear-gradient(135deg, #111111 0%, #161616 100%); border: 1px solid rgba(34, 197, 94, 0.35); border-radius: 12px; padding: 24px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 36px; box-shadow: 0 8px 30px rgba(0,0,0,0.5); }
+    .pdf-hero-info h3 { font-size: 1.25rem; color: #FFFFFF; margin-bottom: 4px; }
+    .pdf-hero-info p { color: var(--text-muted); font-size: 0.9rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 24px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+    .card-full { grid-column: 1 / -1; }
+    .preview { background: #070707; border: 1px solid var(--border); border-radius: 6px; padding: 16px; display: flex; align-items: center; justify-content: center; min-height: 120px; }
+    .preview img { max-width: 100%; height: auto; border-radius: 4px; }
+    .preview.light-check { background-image: linear-gradient(45deg, #181818 25%, transparent 25%), linear-gradient(-45deg, #181818 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #181818 75%), linear-gradient(-45deg, transparent 75%, #181818 75%); background-size: 16px 16px; background-position: 0 0, 0 8px, 8px -8px, -8px 0px; }
+    .info h3 { font-size: 1.1rem; margin-bottom: 4px; }
+    .info p { font-size: 0.85rem; color: var(--text-muted); }
+    .badge { display: inline-block; padding: 2px 8px; background: rgba(34, 197, 94, 0.12); color: var(--green); border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-bottom: 6px; font-family: monospace; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 18px; border-radius: 6px; font-weight: 600; font-size: 0.88rem; text-decoration: none; cursor: pointer; transition: 0.2s; white-space: nowrap; }
+    .btn-green { background: var(--green); color: #000; font-weight: 700; }
+    .btn-green:hover { background: #16A34A; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .btn-outline:hover { border-color: var(--green); color: var(--green); }
+    .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
+    .back { display: inline-block; margin-bottom: 24px; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+    .back:hover { color: var(--green); }
+    @media (max-width: 640px) {
+      .pdf-hero { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="/" class="back">← Back to Website</a>
+    <h1>KINETIX <span>AI</span> — Brand Asset &amp; Banner Kit</h1>
+    <p class="sub">Download your production-ready Brand Kit PDF, LinkedIn cover banners, and logo files.</p>
+
+    <!-- Master PDF Download Banner -->
+    <div class="pdf-hero">
+      <div class="pdf-hero-info">
+        <span class="badge" style="background: rgba(34,197,94,0.18);">ALL-IN-ONE PDF COMPENDIUM</span>
+        <h3>KINETIX AI Complete Brand Kit (PDF)</h3>
+        <p>Contains all logos, high-resolution LinkedIn banners, color codes, typography, and setup instructions in a single document.</p>
+      </div>
+      <div>
+        <a href="/kinetix-ai-brand-kit.pdf" download="KINETIX-AI-Complete-Brand-Kit.pdf" class="btn btn-green" style="padding: 13px 24px; font-size: 0.95rem;">
+          📥 Download Complete PDF Kit
+        </a>
+      </div>
+    </div>
+
+    <!-- Section 1: LinkedIn Banners -->
+    <h2>1. LinkedIn Cover Banners (Email-Only / Clean)</h2>
+    <div class="grid">
+      <!-- 1584x396 Standard Banner -->
+      <div class="card card-full">
+        <div class="preview" style="padding: 10px;">
+          <img src="/linkedin-banner.png" alt="KINETIX AI LinkedIn Cover Banner" style="width: 100%; border: 1px solid #1F1F1F;">
+        </div>
+        <div class="info">
+          <span class="badge">1584 × 396 PX (High-Res)</span>
+          <h3>LinkedIn Primary Cover Banner</h3>
+          <p>Clean layout with bold value proposition, technical capability tags, email contact, and bottom-left avatar safe zone.</p>
+        </div>
+        <div class="actions">
+          <a href="/linkedin-banner.png" download="kinetix-ai-linkedin-banner-1584x396.png" class="btn btn-green">Download PNG (1584×396)</a>
+          <a href="/linkedin-banner.jpg" download="kinetix-ai-linkedin-banner-1584x396.jpg" class="btn btn-outline">Download JPG</a>
+          <a href="/linkedin-banner.svg" download="kinetix-ai-linkedin-banner.svg" class="btn btn-outline">Vector SVG</a>
+        </div>
+      </div>
+
+      <!-- 1128x191 Company Page Banner -->
+      <div class="card card-full">
+        <div class="preview" style="padding: 10px;">
+          <img src="/linkedin-company-banner.png" alt="KINETIX AI LinkedIn Company Banner" style="width: 100%; border: 1px solid #1F1F1F;">
+        </div>
+        <div class="info">
+          <span class="badge">1128 × 191 PX (Company Page Spec)</span>
+          <h3>LinkedIn Company Page Spec Banner</h3>
+          <p>Optimized directly for standard LinkedIn Company Page cover header ratios.</p>
+        </div>
+        <div class="actions">
+          <a href="/linkedin-company-banner.png" download="kinetix-ai-company-banner-1128x191.png" class="btn btn-green">Download PNG (1128×191)</a>
+          <a href="/linkedin-company-banner.jpg" download="kinetix-ai-company-banner-1128x191.jpg" class="btn btn-outline">Download JPG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Logos & Profile Icons -->
+    <h2>2. Logo Marks &amp; Profile Icons</h2>
+    <div class="grid">
+      <!-- 1. Primary Horizontal Logo (Dark) -->
+      <div class="card">
+        <div class="preview">
+          <img src="/logo.png" alt="KINETIX AI Logo Dark" style="max-width: 280px; width: 100%;">
+        </div>
+        <div class="info">
+          <span class="badge">1680 × 400 PX</span>
+          <h3>Primary Horizontal Logo (Dark)</h3>
+          <p>High-resolution logo with dark background for website headers, pitch decks, and presentations.</p>
+        </div>
+        <div class="actions">
+          <a href="/logo.png" download="kinetix-ai-logo.png" class="btn btn-green">Download PNG</a>
+          <a href="/logo.jpg" download="kinetix-ai-logo.jpg" class="btn btn-outline">Download JPG</a>
+        </div>
+      </div>
+
+      <!-- 2. Transparent Horizontal Logo -->
+      <div class="card">
+        <div class="preview light-check">
+          <img src="/logo-transparent.png" alt="KINETIX AI Logo Transparent" style="max-width: 260px; width: 100%;">
+        </div>
+        <div class="info">
+          <span class="badge">1600 × 320 PX (Transparent)</span>
+          <h3>Transparent Horizontal Logo</h3>
+          <p>High-res PNG with transparent background for overlays, documents, and merchandise.</p>
+        </div>
+        <div class="actions">
+          <a href="/logo-transparent.png" download="kinetix-ai-logo-transparent.png" class="btn btn-green">Download PNG</a>
+          <a href="/logo-transparent.png" target="_blank" class="btn btn-outline">Open Full Res</a>
+        </div>
+      </div>
+
+      <!-- 3. App Icon / Square Avatar (1024x1024) -->
+      <div class="card">
+        <div class="preview">
+          <img src="/logo-icon.png" alt="KINETIX AI Icon Emblem" style="width: 80px; height: 80px; border-radius: 12px;">
+        </div>
+        <div class="info">
+          <span class="badge">1024 × 1024 PX (Square Avatar)</span>
+          <h3>LinkedIn Profile Picture / Icon</h3>
+          <p>1:1 Square kinetic 'K' emblem for LinkedIn company logo avatar and app icons.</p>
+        </div>
+        <div class="actions">
+          <a href="/logo-icon.png" download="kinetix-ai-icon-1024.png" class="btn btn-green">Download PNG</a>
+          <a href="/logo-icon.jpg" download="kinetix-ai-icon-1024.jpg" class="btn btn-outline">Download JPG</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
