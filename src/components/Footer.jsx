@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Linkedin, Mail, Check, Github, Twitter, ArrowUpRight } from 'lucide-react';
+import { Linkedin, Mail, Check, ArrowUpRight } from 'lucide-react';
 import { companyInfo } from '../data/portfolioData';
 
 const navLinks = [
@@ -21,8 +21,6 @@ export default function Footer() {
 
   const socials = [
     { label: 'LinkedIn', href: companyInfo.linkedin, icon: <Linkedin size={16} /> },
-    { label: 'GitHub', href: companyInfo.github, icon: <Github size={16} /> },
-    { label: 'Twitter / X', href: companyInfo.twitter, icon: <Twitter size={16} /> },
   ];
 
   return (

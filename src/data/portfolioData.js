@@ -1,12 +1,10 @@
 export const companyInfo = {
   name: "KINETIX AI",
   subtitle: "Autonomous Systems & Custom AI Engineering Studio",
-  location: "San Francisco · Global Remote",
+  location: "Dallas, Texas",
   email: "contactkinetixai@gmail.com",
   whatsapp: "+923075563077",
-  github: "https://github.com/kinetix-ai",
   linkedin: "https://www.linkedin.com/company/kinetix-ai-studio/",
-  twitter: "https://twitter.com/kinetix_ai"
 };
 
 export const deployments = [

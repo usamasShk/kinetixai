@@ -88,9 +88,7 @@ export default function ContactSection() {
               Tell us what you're <span className="text-glow-green">building.</span>
             </h2>
             <p className="body-lg" style={{ maxWidth: '440px', marginBottom: '30px' }}>
-              Describe your problem, workflow bottleneck, or custom AI requirement. When you submit
-              the form, your inquiry is sent directly to our email{' '}
-              <strong style={{ color: '#FFFFFF' }}>{companyInfo.email}</strong>.
+              Describe your problem, workflow bottleneck, or custom AI requirement.
             </p>
 
             {/* Meta chips */}
