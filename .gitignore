@@ -26,3 +26,6 @@ dist-ssr
 fff.mp4
 1009*.mp4
 skil.mp4
+
+.vercel
+.env*
