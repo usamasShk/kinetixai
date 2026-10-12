@@ -194,6 +194,20 @@ export default function BackgroundCanvas() {
           height: '100%',
         }}
       />
+      {/* Ambient green glow orbs — deep ambient light behind the network */}
+      <div className="glow-orb glow-orb-a" aria-hidden="true" />
+      <div className="glow-orb glow-orb-b" aria-hidden="true" />
+      {/* Fine blueprint grid layer */}
+      <div
+        className="bg-grid"
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          maskImage: 'radial-gradient(ellipse 90% 70% at 50% 20%, black 0%, transparent 78%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 90% 70% at 50% 20%, black 0%, transparent 78%)',
+        }}
+      />
       {/* Subtle radial vignette to soften edges and keep text pristine */}
       <div
         style={{

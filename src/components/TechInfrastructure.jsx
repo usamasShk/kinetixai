@@ -1,5 +1,6 @@
 import React from 'react';
 import { Cpu, Database, Server, Layout, Eye, Cloud, Zap } from 'lucide-react';
+import { Reveal, SectionHeader } from './ui';
 
 const techUnits = [
   {
@@ -39,177 +40,148 @@ const techUnits = [
   },
 ];
 
+function MarqueeRow({ units, reverse, duration }) {
+  // Duplicate twice for a seamless -50% translate loop
+  const loop = [...units, ...units];
+  return (
+    <div className="marquee" style={{ marginBottom: '16px' }}>
+      <div className="marquee-fade left" />
+      <div className="marquee-fade right" />
+      <div
+        className={`marquee-track ${reverse ? 'reverse' : ''}`}
+        style={{ '--marquee-duration': duration }}
+      >
+        {loop.map((unit, idx) => (
+          <div key={`${unit.heading}-${idx}`} className="tech-unit-card">
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: '14px',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '9px' }}>
+                <span
+                  style={{
+                    color: 'var(--green)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    width: '30px',
+                    height: '30px',
+                    borderRadius: '7px',
+                    background: 'var(--green-dim)',
+                    border: '1px solid var(--green-border)',
+                    justifyContent: 'center',
+                  }}
+                >
+                  {unit.icon}
+                </span>
+                <h3
+                  style={{
+                    fontSize: '1rem',
+                    fontWeight: 700,
+                    fontFamily: 'var(--font-display)',
+                    color: 'var(--text-primary)',
+                    letterSpacing: '-0.01em',
+                    margin: 0,
+                  }}
+                >
+                  {unit.heading}
+                </h3>
+              </div>
+
+              <span
+                style={{
+                  width: '6px',
+                  height: '6px',
+                  borderRadius: '50%',
+                  background: 'var(--green)',
+                  boxShadow: '0 0 8px rgba(34, 197, 94, 0.6)',
+                  display: 'inline-block',
+                }}
+              />
+            </div>
+
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+              {unit.frameworks.map((fw) => (
+                <span key={fw} className="tech-badge">
+                  {fw}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function TechInfrastructure() {
-  // Duplicate array 3 times for seamless infinite continuous scroll
-  const duplicatedUnits = [...techUnits, ...techUnits, ...techUnits];
+  const rowA = techUnits.slice(0, 4);
+  const rowB = techUnits.slice(4);
 
   return (
     <section id="tech" className="section" style={{ overflow: 'hidden', position: 'relative' }}>
       <div className="container">
-        {/* Section Header */}
-        <div style={{ marginBottom: '36px' }}>
-          <p className="caption" style={{ marginBottom: '10px' }}>Technical Stack</p>
-          <h2 className="heading-xl">
-            What we <span style={{ color: 'var(--green)' }}>build with.</span>
-          </h2>
-        </div>
+        <SectionHeader
+          index="04"
+          eyebrow="Technical Stack"
+          title={
+            <>
+              What we <span className="text-glow-green">build with.</span>
+            </>
+          }
+        />
       </div>
 
-      {/* Infinite Marquee Slider with Edge Fade Masks */}
-      <div className="tech-marquee-wrapper" style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
-        {/* Gradient edge masks for smooth fade in/out */}
-        <div className="edge-fade edge-fade-left" />
-        <div className="edge-fade edge-fade-right" />
-
-        {/* Continuous Track moving Right to Left */}
-        <div className="tech-marquee-track">
-          {duplicatedUnits.map((unit, idx) => (
-            <div
-              key={`${unit.heading}-${idx}`}
-              className="tech-unit-card"
-            >
-              {/* Main Heading Row */}
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span style={{ color: '#16A34A', display: 'flex', alignItems: 'center' }}>
-                    {unit.icon}
-                  </span>
-                  <h3 style={{
-                    fontSize: '1.05rem',
-                    fontWeight: 700,
-                    color: '#15803D',
-                    letterSpacing: '-0.01em',
-                    margin: 0,
-                  }}>
-                    {unit.heading}
-                  </h3>
-                </div>
-
-                <span style={{
-                  width: '6px',
-                  height: '6px',
-                  borderRadius: '50%',
-                  background: '#16A34A',
-                  boxShadow: '0 0 8px rgba(34, 197, 94, 0.6)',
-                  display: 'inline-block',
-                }} />
-              </div>
-
-              {/* List of Frameworks */}
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                {unit.frameworks.map((fw) => (
-                  <span
-                    key={fw}
-                    className="tech-badge"
-                  >
-                    {fw}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Two counter-scrolling rows with edge fades */}
+      <Reveal y={16}>
+        <MarqueeRow units={rowA} reverse={false} duration="44s" />
+        <MarqueeRow units={rowB} reverse duration="36s" />
+      </Reveal>
 
       <style>{`
-        .tech-marquee-wrapper {
-          padding: 8px 0 24px 0;
-        }
-
-        .edge-fade {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 140px;
-          z-index: 10;
-          pointer-events: none;
-        }
-
-        .edge-fade-left {
-          left: 0;
-          background: linear-gradient(to right, var(--bg) 0%, transparent 100%);
-        }
-
-        .edge-fade-right {
-          right: 0;
-          background: linear-gradient(to left, var(--bg) 0%, transparent 100%);
-        }
-
-        .tech-marquee-track {
-          display: flex;
-          width: max-content;
-          will-change: transform;
-          animation: marqueeScroll 36s linear infinite;
-        }
-
-        .tech-marquee-wrapper:hover .tech-marquee-track {
-          animation-play-state: paused;
-        }
-
-        @keyframes marqueeScroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-33.333333%);
-          }
-        }
-
-        /* Clean Frosted White Glass Card */
         .tech-unit-card {
           flex-shrink: 0;
-          width: 250px;
-          background: rgba(255, 255, 255, 0.85);
-          backdrop-filter: blur(16px);
-          -webkit-backdrop-filter: blur(16px);
-          border: 1px solid rgba(255, 255, 255, 0.4);
-          border-radius: 10px;
+          width: 270px;
+          background: linear-gradient(180deg, var(--surface-raised) 0%, var(--surface) 100%);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-md);
           padding: 18px 20px;
-          margin: 0 16px; /* Generous spacing between cards */
+          margin: 0 9px;
           display: flex;
           flex-direction: column;
-          justifyContent: space-between;
           transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
           user-select: none;
-          position: relative;
-          box-shadow: 0 10px 25px -6px rgba(0, 0, 0, 0.35), 0 0 15px rgba(34, 197, 94, 0.12);
         }
 
         .tech-badge {
           font-family: var(--font-mono);
-          font-size: 0.74rem;
-          color: #15803D;
-          background: rgba(240, 253, 244, 0.9);
-          border: 1px solid rgba(34, 197, 94, 0.35);
+          font-size: 0.72rem;
+          color: var(--text-secondary);
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid var(--border);
           padding: 4px 9px;
           border-radius: 4px;
           white-space: nowrap;
-          font-weight: 600;
           transition: all 0.2s ease;
         }
 
         .tech-unit-card:hover {
-          background: rgba(255, 255, 255, 0.95);
-          border-color: #22C55E;
+          border-color: var(--green-border);
           transform: translateY(-4px);
-          box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.45), 0 0 24px rgba(34, 197, 94, 0.35);
+          box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 0 24px -6px rgba(34, 197, 94, 0.3);
         }
 
         .tech-unit-card:hover .tech-badge {
-          border-color: #16A34A;
-          background: #DCFCE7;
-          color: #14532D;
+          border-color: var(--green-border);
+          color: var(--green-bright);
+          background: var(--green-dim);
         }
 
         @media (max-width: 768px) {
-          .edge-fade {
-            width: 40px;
-          }
-          .tech-unit-card {
-            width: 220px;
-            padding: 14px 16px;
-            margin: 0 10px;
-          }
+          .tech-unit-card { width: 230px; padding: 14px 16px; }
         }
       `}</style>
     </section>

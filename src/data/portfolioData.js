@@ -14,13 +14,13 @@ export const deployments = [
     id: "soccervision",
     title: "SoccerVision",
     subtitle: "Automated Football Video Analysis & Highlight Generation",
-    description: "Coaches and analysts spent hours manually scrubbing through match footage. SoccerVision processes the full video feed, identifies key events — goals, shots, fouls — and exports a ready-to-use highlight reel in minutes.",
+    description: "Coaches and analysts spent hours manually scrubbing through match footage. SoccerVision processes the full video feed, identifies key events (goals, shots, fouls) and exports a ready-to-use highlight reel in minutes.",
     badge: "Computer Vision · Deep Learning",
     videoUrl: "/videos/soccervision.mp4",
     tags: ["Python", "YOLOv8", "OpenCV", "FastAPI", "React"],
     pipeline: ["Football Video", "AI Analysis", "Event Detection", "Timestamp Mapping", "Highlight Reel"],
     caseStudy: {
-      problem: "Coaches and media teams spent 2–3 hours per match scrubbing raw footage to clip highlights and tag tactical moments. At scale, this was simply unsustainable.",
+      problem: "Coaches and media teams spent 2-3 hours per match scrubbing raw footage to clip highlights and tag tactical moments. At scale, this was simply unsustainable.",
       approach: "Built an automated video analysis pipeline using YOLOv8 for real-time object tracking and a custom temporal event classifier to detect goals, shots, fouls, and key passes.",
       architecture: [
         { step: "01 Video Intake", detail: "High-FPS upload with frame buffer normalization and preprocessing" },
@@ -37,7 +37,7 @@ export const deployments = [
     id: "youtube-qa",
     title: "YouTube Q&A",
     subtitle: "Ask Questions. Get Answers from Video Content.",
-    description: "Long videos contain more information than most people extract. This tool lets you ask specific questions and get grounded answers with exact timestamps — no scrubbing required.",
+    description: "Long videos contain more information than most people extract. This tool lets you ask specific questions and get grounded answers with exact timestamps. No scrubbing required.",
     badge: "RAG · Vector Search · LLM",
     videoUrl: "/videos/youtube-qa.mp4",
     tags: ["React", "Python", "LangChain", "Pinecone", "OpenAI"],
@@ -90,12 +90,12 @@ export const processSteps = [
   {
     num: "02",
     title: "Architecture",
-    description: "We design the system — which models, databases, and APIs are needed, and how they connect."
+    description: "We design the system: which models, databases, and APIs are needed, and how they connect."
   },
   {
     num: "03",
     title: "Build",
-    description: "Engineering the full stack — backend APIs, AI integrations, and front-end interfaces — with continuous testing."
+    description: "Engineering the full stack: backend APIs, AI integrations, and front-end interfaces, with continuous testing."
   },
   {
     num: "04",
