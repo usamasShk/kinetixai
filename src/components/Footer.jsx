@@ -87,25 +87,6 @@ export default function Footer() {
               Autonomous Systems & Custom AI Engineering Studio. Built for businesses that need
               production-ready software.
             </p>
-
-            {/* Status line */}
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                marginTop: '20px',
-                padding: '6px 12px',
-                borderRadius: '999px',
-                background: 'var(--green-dim)',
-                border: '1px solid var(--green-border)',
-              }}
-            >
-              <span className="eyebrow-dot" style={{ width: '5px', height: '5px' }} />
-              <span className="mono" style={{ fontSize: '0.68rem', color: 'var(--green-bright)', letterSpacing: '0.06em' }}>
-                ALL SYSTEMS OPERATIONAL
-              </span>
-            </div>
           </div>
 
           {/* Nav links */}
