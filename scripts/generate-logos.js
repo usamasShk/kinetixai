@@ -145,7 +145,7 @@ async function generateAll() {
   doc.roundedRect(40, 530, pageWidth - 80, 80, 6).fill('#111111').stroke('#1F1F1F');
   doc.font('Helvetica-Bold').fontSize(11).fillColor('#22C55E').text('OFFICIAL CONTACT CHANNELS', 56, 545);
   doc.font('Helvetica').fontSize(10).fillColor('#FFFFFF').text('Direct Email:  ', 56, 565, { continued: true });
-  doc.font('Helvetica-Bold').fillColor('#22C55E').text('contactkinetixai@gmail.com');
+  doc.font('Helvetica-Bold').fillColor('#22C55E').text('info@kinetixai.cc');
   doc.font('Helvetica').fontSize(10).fillColor('#FFFFFF').text('WhatsApp Direct:  ', 56, 582, { continued: true });
   doc.font('Helvetica-Bold').fillColor('#22C55E').text('+92 307 5563077');
 
@@ -181,7 +181,7 @@ async function generateAll() {
     '2. Company Header Banner: Upload "linkedin-banner.png" or "linkedin-company-banner.png".',
     '3. Company Display Name: Set to "KINETIX AI".',
     '4. Tagline: "We build AI systems for businesses that need results."',
-    '5. Contact Email: Set public inquiry email to "contactkinetixai@gmail.com".'
+    '5. Contact Email: Set public inquiry email to "info@kinetixai.cc".'
   ];
 
   let sy = 472;

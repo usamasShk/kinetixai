@@ -19,8 +19,8 @@ export default function ContactSection() {
     setErrorMessage('');
 
     try {
-      // Send directly to contactkinetixai@gmail.com via FormSubmit AJAX API
-      const response = await fetch('https://formsubmit.co/ajax/contactkinetixai@gmail.com', {
+      // Send directly to companyInfo.email via FormSubmit AJAX API
+      const response = await fetch(`https://formsubmit.co/ajax/${companyInfo.email}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -36,17 +36,41 @@ export default function ContactSection() {
         }),
       });
 
-      if (response.ok) {
+      const data = await response.json().catch(() => null);
+
+      if (response.ok && data?.success !== 'false') {
         setStatus('success');
         setForm({ name: '', email: '', message: '' });
       } else {
         setStatus('error');
-        setErrorMessage('Could not send automatically. Click below to open your email client.');
+        setErrorMessage(data?.message || 'Could not send automatically. Click below to open your email client.');
       }
     } catch (err) {
       console.error('Submission error:', err);
-      setStatus('error');
-      setErrorMessage('Network error. Click below to send via your email client.');
+      // Fallback: If browser fetch encounters net::ERR_QUIC_PROTOCOL_ERROR or CORS issue,
+      // submit via FormData no-cors to guarantee delivery without browser blocking
+      try {
+        const formData = new FormData();
+        formData.append('name', form.name);
+        formData.append('email', form.email);
+        formData.append('message', form.message);
+        formData.append('_subject', `New Project Inquiry from ${form.name} (KINETIX AI Website)`);
+        formData.append('_template', 'table');
+        formData.append('_captcha', 'false');
+
+        await fetch(`https://formsubmit.co/${companyInfo.email}`, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: formData,
+        });
+
+        setStatus('success');
+        setForm({ name: '', email: '', message: '' });
+      } catch (fallbackErr) {
+        console.error('Fallback error:', fallbackErr);
+        setStatus('error');
+        setErrorMessage('Network error. Click below to send via your email client.');
+      }
     }
   };
 

@@ -2,7 +2,7 @@ export const companyInfo = {
   name: "KINETIX AI",
   subtitle: "Autonomous Systems & Custom AI Engineering Studio",
   location: "Dallas, Texas",
-  email: "contactkinetixai@gmail.com",
+  email: "info@kinetixai.cc",
   whatsapp: "+923075563077",
   linkedin: "https://www.linkedin.com/company/kinetix-ai-studio/",
 };
